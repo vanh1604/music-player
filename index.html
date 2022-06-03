@@ -12,6 +12,18 @@
     <title>Music Player</title>
   </head>
   <body>
+    <div class="container">
+      <ul class="song-list">
+        <li class="item-list" onclick="changeSongOnClick('Khách Mời')">
+          Khách Mời
+        </li>
+        <li class="item-list" onclick="changeSongOnClick('Em không Hiểu')">
+          Em không Hiểu
+        </li>
+        <li class="item-list" onclick="changeSongOnClick('Tình Ca Tình Ta')">Tình Ca Tình Ta</li>
+        <li class="item-list" onclick="changeSongOnClick('Hương Hoa Phai Tàn')">Hương Hoa Phai Tàn</li>
+      </ul>
+    </div>
     <div class="player-container">
       <!-- song -->
       <div class="img-container">
@@ -19,9 +31,7 @@
       </div>
       <h2 id="title">Khách Mời</h2>
       <h3 id="artist">Trương Viễn</h3>
-      <audio
-        src="./music/Khách Mời.mp3"
-      ></audio>
+      <audio src="./music/Khách Mời.mp3"></audio>
       <div class="progress-container" id="progress-container">
         <div class="progress" id="progress"></div>
         <div class="duration-wrapper">
