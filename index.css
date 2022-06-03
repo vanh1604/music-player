@@ -98,3 +98,8 @@ body {
   border-radius: 20px;
   box-shadow: rgb(0 0 0 / 30%) 0px 15px 30px 5px;
 }
+
+#btn {
+  border-bottom: #242323;
+  size: 20px;
+}

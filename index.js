@@ -2,14 +2,17 @@ const image = document.querySelector("img");
 const title = document.getElementById("title");
 const artist = document.getElementById("artist");
 const progressContainer = document.getElementById("progress-container");
-// const progress = document.getElementById("progress");
-// const currentTimeEl = document.getElementById("current-time");
-// const durationEl = document.getElementById("duration");
+const progress = document.getElementById("progress");
+const currentTimeEl = document.getElementById("current-time");
+const durationEl = document.getElementById("duration");
 const music = document.querySelector("audio");
 const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const chooseSong = document.getElementsByClassName("item-list");
+const btn = document.getElementById('btn');
+const songList = document.getElementById('songList')
+
 
 //musi
 const songs = [
@@ -144,8 +147,16 @@ music.addEventListener("ended", nextSong);
   // //   console.log(result);
   // //   loadSong(result)}
   // });
-function _changeSongOnClick(songName) {
-  const result = songs.filter((song) => song.displayName == songName)
+function changeSongOnClick(songName) {
+  let result = songs.filter((song) => song.displayName == songName)
   console.log(result);
   loadSong(result[0])
+}
+
+function showList() {
+  if (songList.style.display === 'block') {
+    songList.style.display = 'none'
+  } else {
+    songList.style.display ='block'
+  }
 }
