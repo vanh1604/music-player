@@ -10,6 +10,9 @@ const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const chooseSong = document.getElementsByClassName("item-list");
+const btn = document.getElementById('btn');
+const songList = document.getElementById('songList')
+
 
 //musi
 const songs = [
@@ -148,4 +151,12 @@ function changeSongOnClick(songName) {
   let result = songs.filter((song) => song.displayName == songName)
   console.log(result);
   loadSong(result[0])
+}
+
+function showList() {
+  if (songList.style.display === 'block') {
+    songList.style.display = 'none'
+  } else {
+    songList.style.display ='block'
+  }
 }
